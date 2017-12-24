@@ -1,0 +1,202 @@
+
+<!DOCTYPE HTML> 
+<!--[if IE 8]><html class="ie ie8"> <![endif]-->
+<!--[if IE 9]><html class="ie ie9"> <![endif]-->
+<!--[if gt IE 9]><!-->	<html> <!--<![endif]-->
+<head>
+<!-- Basic -->
+<meta charset="utf-8">
+<title>Interview Questions</title>
+<meta name="description" content="MySQL Data Types - Learn MySQL from basic to advanced covering database programming clauses command functions administration queries and usage along with PHP in simple steps. This tutorial takes you starting from basic to advance MySQL concepts." />
+<meta name="keywords" content="Interview, PHP, Mysql, Nodejs, javascript, Jquery, Database, Ajax" />
+<!-- <base href="https://www.tutorialspoint.com/" /> -->
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes">
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="website" />
+<meta property="fb:app_id" content="471319149685276" />
+<meta property="og:site_name" content="www.vikash2696.in" />
+<meta name="robots" content="index, follow"/>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="author" content="vikash2696.in">
+<script src="/js/jquery-3.2.1.js"></script>
+<script type="text/javascript" src="/js/main.js"></script>
+<link rel="stylesheet" href="/css/style-min.css">
+<link rel="stylesheet" href="/css/form_style.css">
+
+ <script src="https://cdn.ckeditor.com/4.5.1/standard/ckeditor.js"></script>
+ 
+
+
+<style>
+select{ border:0 !important; outline: 1px inset black !important; outline-offset: -1px !important; }
+ul.nav-list.primary>li a.videolink{    background: none; margin: 0px; padding: 0px; border: 1px solid #d6d6d6;}
+div.feature-box div.feature-box-icon, .col-md-3 .course-box, li.heading, div.footer-copyright { background: #004e61 url() repeat center center !important;}
+.sub-main-menu .sub-menuu div:hover, .sub-main-menu .viewall, header nav ul.nav-main li a:hover, button.btn-responsive-nav, header div.search button.btn-default { background: #004e61 !important;}
+.submenu-item{ border-bottom: 2px solid #004e61 !important; border-top: 2px solid #004e61 !important }
+.ace_scroller{overflow: auto!important;}
+a.demo{font-family: "Open Sans",Arial,sans-serif; background:#004e61; color:#fff; font-size:13px; padding:3px 10px; border:1px solid #d6d6d6; position:absolute; right:5px; margin:-6px 17px 0px 0px;}
+a.demo:hover{opacity:.8}
+pre.prettyprint {
+    border: 1px solid #d6d6d6;
+    background-color: #eee;
+    width: 98%;
+    border-radius: 0;
+    padding: 5px;
+    margin: 0;
+    margin-bottom: 10px; margin-top:15px;
+    font-size: 13px;
+    overflow: auto;
+}
+</style>
+</head>
+<body>
+<div class="wrapLoader">
+   <div class="imgLoader">
+      <img  src="/images/loading-cg.gif" alt="" width="70" height="70" />
+   </div>
+</div>
+<header>
+   <div class="container">			
+      <h1 class="logo">
+      <a href="index.htm" title="vikash2696">
+      <img alt="vikash2696" src="/images/logo.png">
+      </a>
+      </h1>			
+   </div>
+  
+   <div class="navbar nav-main">
+      <div class="container">
+         <nav class="nav-main mega-menu">
+            <ul class="nav nav-pills nav-main" id="mainMenu">
+               <li class="dropdown no-sub-menu"> <a class="dropdown" href="index.htm"> Home</a> </li>   
+               <li class="dropdown" id="liTL"><a class="dropdown" href="javascript:void(0);"><span class="tut-lib"> Tutorials Library </span></a></li>
+               <li class="dropdown no-sub-menu"><a class="dropdown" href="codingground.htm"> Coding Ground </a> </li>
+               <li class="dropdown no-sub-menu"><a class="dropdown" href="tutor_connect/index.php"> Tutor Connect</a></li>
+               <li class="dropdown no-sub-menu"><a class="dropdown" href="videotutorials/index.htm">Videos </a></li>
+               <li class="dropdown no-sub-menu">
+                  <div class="searchform-popup">
+                     <input class="header-search-box" type="text" id="search-string" name="q" placeholder="Search your favorite tutorials..." onfocus="if (this.value == 'Search your favorite tutorials...') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Search your favorite tutorials...';}" autocomplete="off">
+                     <div class="magnifying-glass"><i class="icon-search"></i> Search </div>
+                 </div>
+               </li>
+            </ul>
+         </nav>
+         <div class="submenu-item sub-main-menu" id="top-sub-menu"></div>
+         
+      </div>
+   </div>	
+</header>
+<div style="clear:both;"></div>
+<div role="main" class="main">
+<div class="container">
+<div class="row">
+<div class="col-md-2">
+<aside class="sidebar">
+<div class="mini-logo">
+<img src="/images/mysql-mini-logo.jpg" alt="Interview Questions" />
+</div>
+<ul class="nav nav-list primary left-menu" >
+<li class="heading">Interview Questions</li>
+<li><a href="/mysql/index.htm">PHP - Home</a></li>
+<li><a href="/mysql/mysql-introduction.htm">NodeJs - Introduction</a></li>
+</ul>
+</aside>
+</div>
+<!-- PRINTING STARTS HERE -->
+<div class="row">
+<div class="col-md-7 middle-col">
+<h1>MySQL - Data Types</h1>
+<hr />
+
+<div class="admin_question_form_div">
+  <form method="post" name="question_form" id="question_form">
+     <div class="form_element">
+       <label class="label_class">Category</label>  <br/>
+       <input type="text" name="category" size="72" />
+     </div> 
+     <div class="form_element">
+       <label class="">Question</label>  <br/>
+       <input type="text" class="simple_text_box" name="question" size="72" />
+       <!-- <textarea name="question" class="rich_text_box" id="editor2" rows="10" cols="50"></textarea> -->
+       
+     </div>
+     <div class="form_element">
+       <label class="">Answer</label> <br/> 
+       <textarea title="What's on your mind?" class="" name="answer" placeholder="What's on your mind?"></textarea>
+       <!-- <textarea name="answer" id="editor1" rows="10" cols="50"></textarea> -->
+     </div> 
+      <div class="form_element editor1">
+       <input type="button" class="submit_btn_class" id="submit_btn" name="submit_answer" value ="Save"/>
+       <input type="button" class="submit_btn_class" name="cancel" value ="Cancel"/>
+     </div> 
+
+</form>
+
+
+</div>
+<div class="question_answer_area">
+  for(var i=0; i < title.length; i++) {
+  }
+
+
+</div>
+
+
+
+
+</div>
+<div class="row">
+<div class="col-md-2" id="rightbar">
+<div class="simple-ad">
+<a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('https://www.facebook.com/sharer.php?u=' + 'http://www.tutorialspoint.com/mysql/mysql-data-types.htm','sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;">
+<img src="/images/facebookIcon.jpg" alt="img" />
+</a>
+<a  href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('https://twitter.com/share?url=' + 'http://www.tutorialspoint.com/mysql/mysql-data-types.htm','sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;">
+<img src="/images/twitterIcon.jpg" alt="img" />
+</a>
+<a  href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('https://www.linkedin.com/cws/share?url=' + 'http://www.tutorialspoint.com/mysql/mysql-data-types.htm&amp;title='+ document.title,'sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;">
+<img src="/images/linkedinIcon.jpg" alt="img" />
+</a>
+<a  href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('https://plus.google.com/share?url=http://www.tutorialspoint.com/mysql/mysql-data-types.htm','sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;">
+<img src="/images/googlePlusIcon.jpg" alt="img" />
+</a>
+
+</div>
+<div class="rightgooglead">
+<!-- /60931893/tutorial_right_top -->
+<div id='div-gpt-ad-1510138782906-2' style='height:250px; width:300px;'>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+  
+//   CKEDITOR.editorConfig = function (config) {
+//     config.language = 'es';
+//     config.uiColor = '#F7B42C';
+//     config.toolbarCanCollapse = true;
+
+// };
+// CKEDITOR.replace('editor1',{height: '100px',});
+// CKEDITOR.replace('editor2',{height: '50px',});
+</script>
+<div class="footer-copyright">
+<div class="container">
+<div class="row">
+
+<div class="col-md-3 col-sm-12 col-xs-12">
+<p>&copy; Copyright 2017. All Rights Reserved.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

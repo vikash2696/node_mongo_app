@@ -1,0 +1,47 @@
+.admin_question_form_div {
+	border:1px solid #EEEEEE;
+	min-height: 430px;
+	border-radius: 4px;
+}
+.form_element{
+    margin-bottom: 10px;
+    float: left;
+    margin-left: 3px;
+    border-radius: 4px;
+    /*border:1px solid red;*/
+}
+.label_class{
+	float: left;
+	display: block;
+	border-radius: 4px;
+}
+.submit_btn_class {
+	/*float: left;*/
+	margin-top: 10px;	
+	width: 100px;
+}
+
+.question_answer_class{
+	min-height: 200px;
+	background-color: white;
+	border:1px solid #EEEEEE;
+	margin-top: 5px;
+	margin-bottom: 10px;
+	border-radius: 4px;
+}
+.category_view_class{
+	min-height: 30px;
+	border:1px solid #EEEEEE;
+}
+.question_view_class{
+	min-height: 30px;
+	border:1px solid #EEEEEE;
+}
+.answer_view_class{
+	min-height: 100px;
+	border:1px solid #EEEEEE;
+}
+textarea {
+    font-family: inherit;
+    letter-spacing: inherit;
+}

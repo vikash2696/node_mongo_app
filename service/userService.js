@@ -4,10 +4,13 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var UserSchema = new Schema({
-
-    name: String,
-    address: String,
-    city: String
+	category: String,
+    question: String,
+    answer: String,
+    status: { type: String, lowercase: true },
+    author: String,
+    created_at: { type: Date, default: Date.now },
+    updated_at: { type: Date, default: Date.now },
 });
 
-module.exports = mongoose.model('User',UserSchema);
+module.exports = mongoose.model('questions',UserSchema);
