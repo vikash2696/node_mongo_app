@@ -1,6 +1,7 @@
+
 .admin_question_form_div {
 	border:1px solid #EEEEEE;
-	min-height: 430px;
+	min-height: 320px;
 	border-radius: 4px;
 }
 .form_element{
@@ -8,6 +9,7 @@
     float: left;
     margin-left: 3px;
     border-radius: 4px;
+    width: 98%;
     /*border:1px solid red;*/
 }
 .label_class{
@@ -22,7 +24,7 @@
 }
 
 .question_answer_class{
-	min-height: 200px;
+	/*min-height: 200px;*/
 	background-color: white;
 	border:1px solid #EEEEEE;
 	margin-top: 5px;
@@ -32,16 +34,36 @@
 .category_view_class{
 	min-height: 30px;
 	border:1px solid #EEEEEE;
+	font-weight: bold;
 }
 .question_view_class{
 	min-height: 30px;
 	border:1px solid #EEEEEE;
+	font-weight: bold;
 }
 .answer_view_class{
-	min-height: 100px;
+	min-height: 50px;
 	border:1px solid #EEEEEE;
 }
 textarea {
     font-family: inherit;
     letter-spacing: inherit;
+}
+.answer_inpur_class{
+	min-height: 100px;
+	width: 100%;
+}
+.user_image {
+    border-radius: 25px; 
+    width: 40px;
+    height: 40px; 
+    margin-right: 10px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+.category_class{
+	float: right;
+	margin-right: 20px;
+	margin-top: 10px;
 }

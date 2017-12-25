@@ -20,6 +20,7 @@ $(document).on("click", '#submit_btn', function() {
 		success: function(result){
 			console.log(result);
 			console.log("errlng"+result.length);
+			$('#question_form').reset();
 			
 		}
 	});
