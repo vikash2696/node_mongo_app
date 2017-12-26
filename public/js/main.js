@@ -28,3 +28,19 @@ $(document).on("click", '#submit_btn', function() {
 		$(".question_answer_area").html(data);
 	});
 });
+
+$(document).on("click", '.register_btn_class', function() {
+    $.get('/register', function(data) {
+
+    	$(".header_label").html("Register");
+		$(".admin_question_form_div").html(data);
+	});
+
+});
+$(document).on("click", '.add_question_btn_class', function() {
+    $.get('/add_question', function(data) {
+    	$(".header_label").html("Submit your question!!!");
+		$(".admin_question_form_div").html(data);
+	});
+
+});

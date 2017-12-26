@@ -4,7 +4,7 @@ var path = require('path');
 var bodyParser = require("body-parser");
 
 //user service
-var Users = require('./service/userService');
+var QuestionSchema = require('./service/questionService');
 
 
 //Mongo DB credentials
@@ -40,7 +40,7 @@ app.get('/', function(req, res) {
 
 app.get('/questions',function(req,res){
 	
-	Users.find({},function(err,alluser){
+	QuestionSchema.find({},function(err,alluser){
 		if(err) {
 			return	res.status(404).send(err);
 		}
@@ -50,9 +50,20 @@ app.get('/questions',function(req,res){
 	}).sort({updated_at: -1});;
 });
 
+app.get('/register',function(req,res){
+		res.render('pages/register', {
+	});
+});
+
+app.get('/add_question',function(req,res){
+		res.render('pages/question_form', {
+	});
+});
+
+
 app.post('/question',function(req,res){
 	// console.log(req.body.category);
-	Users.create({
+	QuestionSchema.create({
 		category: req.body.category,
 		question: req.body.question,
 		answer: req.body.answer,

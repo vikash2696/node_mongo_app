@@ -3,7 +3,7 @@ var mongoose = require('mongoose');
 
 var Schema = mongoose.Schema;
 
-var UserSchema = new Schema({
+var QuestionSchema = new Schema({
 	category: String,
     question: String,
     answer: String,
@@ -13,4 +13,4 @@ var UserSchema = new Schema({
     updated_at: { type: Date, default: Date.now },
 });
 
-module.exports = mongoose.model('questions',UserSchema);
+module.exports = mongoose.model('questions',QuestionSchema);
